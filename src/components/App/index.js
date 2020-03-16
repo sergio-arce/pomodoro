@@ -1,26 +1,14 @@
 
-import React, { useState } from 'react'
+import React from 'react'
+import MainControls from '../MainControls'
+import Tempo from '../Tempo'
+import SecondaryControls from '../SecondaryControls'
 
 const App = () => {
-	
-	const [minuts, setMinuts] = useState('25:00')
-
 	return <div className="main--app">
-		<div>
-			<botton>Start</botton>
-			<botton>Breack</botton>
-			<botton>Long Breack</botton>
-		</div>
-
-		<h2>{minuts}</h2>
-
-		<div>
-			<botton>Play</botton>
-			<botton>Pause</botton>
-			<botton>Stop</botton>
-			<botton>Reset</botton>
-		</div>
+		<MainControls />
+		<Tempo />
+		<SecondaryControls />
 	</div>
-
 }
 export default App
