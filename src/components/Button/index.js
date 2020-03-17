@@ -1,9 +1,13 @@
 
 import React from 'react'
 
-const Button = ({ name }) => {
+const Button = ({ label, selected }) => {
     return <>
-        <button onClick={() => console.log('button')}>{name}</button>
+        <button 
+            onClick={() => selected(label)}
+        >
+            {label}
+        </button>
     </>
 }
 export default Button

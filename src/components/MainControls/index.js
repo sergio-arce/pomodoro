@@ -2,11 +2,11 @@
 import React from 'react'
 import Button from '../Button'
 
-const MainControls = () => {
+const MainControls = ({ selected }) => {
     return <>
-        <Button name='Start' />
-        <Button name='Break' />
-        <Button name='LongBreak' />
+        <Button label='Start' selected={selected} />
+        <Button label='Break' selected={selected} />
+        <Button label='LongBreak' selected={selected} />
     </>
 }
 export default MainControls

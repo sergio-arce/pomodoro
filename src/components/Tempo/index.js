@@ -1,9 +1,9 @@
 
 import React from 'react'
 
-const Tempo = () => {
+const Tempo = ({ minuts }) => {
     return <>
-        <h2>25:00</h2>
+        <h2>{minuts}</h2>
     </>
 }
 export default Tempo
