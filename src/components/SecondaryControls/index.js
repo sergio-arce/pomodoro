@@ -2,12 +2,11 @@
 import React from 'react'
 import Button from '../Button'
 
-const SecondaryControls = ({ selected }) => {
-    return <>
-        <Button label='Play' selected={selected} />
-        <Button label='Pause' selected={selected} />
-        <Button label='Stop' selected={selected} />
-        <Button label='Reset' selected={selected} />
-    </>
-}
+const SecondaryControls = ({ onAction }) => <>
+        <Button label='Play' onAction={onAction} />
+        <Button label='Pause' onAction={onAction} />
+        <Button label='Stop' onAction={onAction} />
+        <Button label='Reset' onAction={onAction} />
+</>
+
 export default SecondaryControls

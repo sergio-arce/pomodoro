@@ -1,26 +1,22 @@
 
-import React, { useState } from 'react'
-import MainControls from '../MainControls'
+import React from 'react'
+
 import Tempo from '../Tempo'
-import SecondaryControls from '../SecondaryControls'
 
-const App = () => {
-	const [minuts, setMinuts] = useState('00:00')
+// import SecondaryControls from '../SecondaryControls'
 
-	const selected = (item) => {
-		 item === 'Start' && setMinuts('25:00')
-		 item === 'Break' && setMinuts('05:00')
-		 item === 'LongBreak' && setMinuts('15:00')
-		 item === 'Play' && console.log('Play...')
-		 item === 'Pause' && console.log('Pause...')
-		 item === 'Stop' && console.log('Stop...')
-		 item === 'Reset' && console.log('Reset...')
-	}
+const App = () => <>
+		{/* <MainControls /> */}
+		<Tempo />
 
-	return <div className="main--app">
-		<MainControls selected={selected}/>
-		<Tempo minuts={minuts}/>
-		<SecondaryControls selected={selected}/>
-	</div>
-}
+</>
+
 export default App
+
+
+// action === 'break' && setTime('05:00')
+// action === 'longBreak' && setTime('15:00')
+// action === 'play' && console.log('Play...')
+// action === 'pause' && console.log('Pause...')
+// action === 'stop' && console.log('Stop...')
+// action === 'reset' && console.log('Reset...')
