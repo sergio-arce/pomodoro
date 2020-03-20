@@ -1,22 +1,37 @@
 
-import React from 'react'
-
+import React, { useState, useEffect } from 'react'
 import Tempo from '../Tempo'
+import MainControls from '../MainControls'
+import SecondaryControls from '../SecondaryControls'
 
-// import SecondaryControls from '../SecondaryControls'
+const App = () => {
 
-const App = () => <>
-		{/* <MainControls /> */}
-		<Tempo />
+	const [chrono, setChrono] = useState(1500)
+	const [isRunning, setIsRunning] = useState(false)
 
-</>
+	const onAction = (action) => {
 
+		if (action === 'start') setIsRunning((prevIsRunning) => !prevIsRunning)
+
+		if (action === 'stop') setIsRunning((prevIsRunning) => !prevIsRunning)
+		
+		if (action === 'reset') setChrono(1500)
+	}
+
+	useEffect(
+		() => {
+			let interval
+			if (isRunning) {
+				interval = setInterval(() => setChrono(prevChrono => prevChrono - 1), 1000)
+				if (chrono === 0) clearInterval(interval)
+			}
+			return () => clearInterval(interval)
+		}, [isRunning, chrono])
+
+	return <>
+		<MainControls onAction={onAction} isRunning={isRunning}/>
+		<Tempo chrono={chrono} />
+		<SecondaryControls onAction={onAction} isRunning={isRunning}/>
+	</>
+}
 export default App
-
-
-// action === 'break' && setTime('05:00')
-// action === 'longBreak' && setTime('15:00')
-// action === 'play' && console.log('Play...')
-// action === 'pause' && console.log('Pause...')
-// action === 'stop' && console.log('Stop...')
-// action === 'reset' && console.log('Reset...')

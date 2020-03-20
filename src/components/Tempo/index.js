@@ -1,27 +1,22 @@
 
-import React, { useState } from 'react'
+import React from 'react'
 
-import MainControls from '../MainControls'
+const Tempo = ({ chrono }) => {
 
+    const changeToString = (num) => {
 
+        let minutes = Math.floor(num / 60)
+        let seconds = num % 60
 
-const Tempo = () => {
+        if (seconds < 10) seconds = '0' + seconds
 
-    const [time, setTime] = useState(1500)
-
-	const onAction = (action) => {
-		//  if (action === 'start')
-		
+        if (minutes < 10) minutes = '0' + minutes
+         
+        return `${minutes}:${seconds}`
     }
     
-    const convertToString = (num) => {
-        return num.toString()
-    }
-
-    return <>
-        
-        <h2>{convertToString(time)}</h2>
-    </>
+    return <h2>{changeToString(chrono)}</h2>
+    
 }
 export default Tempo
 

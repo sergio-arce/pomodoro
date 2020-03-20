@@ -1,10 +1,11 @@
 
 import React from 'react'
 
-const Button = ({ label, onAction }) => {
+const Button = ({ label, name, onAction }) => {
     return <>
         <button 
-            onClick={() => onAction('start')}
+            name={name}
+            onClick={() => onAction(name)}
         >
             {label}
         </button>
