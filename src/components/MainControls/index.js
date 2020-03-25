@@ -2,13 +2,11 @@
 import React from 'react'
 import Button from '../Button'
 
-const MainControls = ({ onAction, isRunning }) => {
+const MainControls = ({ onAction }) => <>
 
-    return <>
-       <Button label={!isRunning ? 'Start' : 'Continue'} name='start' onAction={onAction} />
-    
-        {/* <Button label='Break' onAction={onAction} />
-        <Button label='LongBreak' onAction={onAction} /> */}
-    </>
-}
+        <Button label='Pomodoro' name='pomodoro' onAction={onAction} />
+        <Button label='Break' name='break' onAction={onAction} />
+        <Button label='LongBreak' name='long-break' onAction={onAction} /> 
+</>
+
 export default MainControls
