@@ -3,12 +3,26 @@ import React, { useState, useEffect } from 'react'
 import Tempo from '../Tempo'
 import MainControls from '../MainControls'
 import SecondaryControls from '../SecondaryControls'
-
+// material-ui
+import { AppBar, Toolbar, IconButton, Card, hexToRgb } from '@material-ui/core'
+import MenuIcon from '@material-ui/icons/Menu'
 
 const styles = {
 
 	container: {
-		background: 'red'
+		display: 'flex',
+		justifyContent: 'center',
+		alignItems: 'center',
+		minHeight: '100vh',
+		backgroundColor: '#f05b56',
+	},
+	appBar: {
+		backgroundColor: '#f05b56',
+	},
+	card: {
+		background: 'none rgba(255, 255, 255, 0.2)',
+		width: '330px',
+		height: '370px'
 	}
 }
 
@@ -21,8 +35,6 @@ const App = () => {
 	const onAction = (action) => {
 
 		if (action === 'start') setIsRunning((prevIsRunning) => !prevIsRunning)
-
-		// if (action === 'stop') setIsRunning((prevIsRunning) => !prevIsRunning)
 
 		if (action === 'pomodoro') {
 			setChrono(1500)
@@ -60,10 +72,23 @@ const App = () => {
 			return () => clearInterval(interval)
 		}, [isRunning, chrono])
 
-	return <div style={styles.container}>
-		<MainControls onAction={onAction} isRunning={isRunning}/>
-		<Tempo chrono={chrono} />
-		<SecondaryControls onAction={onAction} isRunning={isRunning}/>
-	</div>
+	return <>
+		<AppBar position="fixed" style={styles.appBar}>
+			<Toolbar>
+				<IconButton color="inherit">
+					<MenuIcon />
+				</IconButton>
+			</Toolbar>
+		</AppBar>
+		<div style={styles.container}>
+			<Card
+				style={styles.card}
+			>
+				<MainControls onAction={onAction} isRunning={isRunning}/>
+				<Tempo chrono={chrono} />
+				<SecondaryControls onAction={onAction} isRunning={isRunning}/>
+			</Card>
+		</div>
+	</>
 }
 export default App
