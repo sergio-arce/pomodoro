@@ -4,6 +4,14 @@ import Tempo from '../Tempo'
 import MainControls from '../MainControls'
 import SecondaryControls from '../SecondaryControls'
 
+
+const styles = {
+
+	container: {
+		background: 'red'
+	}
+}
+
 const App = () => {
 
 	const [chrono, setChrono] = useState(1500)
@@ -52,7 +60,7 @@ const App = () => {
 			return () => clearInterval(interval)
 		}, [isRunning, chrono])
 
-	return <div className="main">
+	return <div style={styles.container}>
 		<MainControls onAction={onAction} isRunning={isRunning}/>
 		<Tempo chrono={chrono} />
 		<SecondaryControls onAction={onAction} isRunning={isRunning}/>
