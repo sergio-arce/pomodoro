@@ -14,7 +14,7 @@ const App = () => {
 
 		if (action === 'start') setIsRunning((prevIsRunning) => !prevIsRunning)
 
-		if (action === 'stop') setIsRunning((prevIsRunning) => !prevIsRunning)
+		// if (action === 'stop') setIsRunning((prevIsRunning) => !prevIsRunning)
 
 		if (action === 'pomodoro') {
 			setChrono(1500)
@@ -52,10 +52,10 @@ const App = () => {
 			return () => clearInterval(interval)
 		}, [isRunning, chrono])
 
-	return <>
+	return <div className="main">
 		<MainControls onAction={onAction} isRunning={isRunning}/>
 		<Tempo chrono={chrono} />
 		<SecondaryControls onAction={onAction} isRunning={isRunning}/>
-	</>
+	</div>
 }
 export default App

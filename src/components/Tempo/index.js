@@ -13,6 +13,8 @@ const Tempo = ({ chrono }) => {
         return `${minutes}:${seconds}`
     }
 
-    return <h2>{changeToString(chrono)}</h2>
+    return <h2 className="main-tempo">
+            {changeToString(chrono)}
+    </h2>
 }
 export default Tempo
