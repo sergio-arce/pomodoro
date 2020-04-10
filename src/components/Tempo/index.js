@@ -1,5 +1,13 @@
 
 import React from 'react'
+import { Typography } from '@material-ui/core'
+
+const styles = {
+    typography: {
+        color: '#fff',
+        fontSize: '6.25rem'
+    }
+}
 
 const Tempo = ({ chrono }) => {
 
@@ -13,8 +21,13 @@ const Tempo = ({ chrono }) => {
         return `${minutes}:${seconds}`
     }
 
-    return <h2 className="main-tempo">
+    return <>
+        <Typography
+            style={styles.typography}
+            align='center'
+        >
             {changeToString(chrono)}
-    </h2>
+        </Typography>
+    </>
 }
 export default Tempo

@@ -4,8 +4,9 @@ import Tempo from '../Tempo'
 import MainControls from '../MainControls'
 import SecondaryControls from '../SecondaryControls'
 // material-ui
-import { AppBar, Toolbar, IconButton, Card, hexToRgb } from '@material-ui/core'
+import { AppBar, Toolbar, IconButton, Card } from '@material-ui/core'
 import MenuIcon from '@material-ui/icons/Menu'
+import soundfile from '../../assets/alarm.mp3'
 
 const styles = {
 
@@ -20,6 +21,9 @@ const styles = {
 		backgroundColor: '#f05b56',
 	},
 	card: {
+		display: 'flex',
+		flexDirection: 'column',
+		justifyContent: 'space-between',
 		background: 'none rgba(255, 255, 255, 0.2)',
 		width: '330px',
 		height: '370px'
@@ -31,12 +35,18 @@ const App = () => {
 	const [chrono, setChrono] = useState(1500)
 	const [isRunning, setIsRunning] = useState(false)
 	const [isReset, setIsReset] = useState(false)
+	const [audio] = useState(new Audio(soundfile))
+	const [timeIsComplete, setTimeIsComplete] = useState(false)
+
+
+
 
 	const onAction = (action) => {
 
 		if (action === 'start') setIsRunning((prevIsRunning) => !prevIsRunning)
 
 		if (action === 'pomodoro') {
+			
 			setChrono(1500)
 			setIsRunning(true)
 			setIsReset(action)
@@ -67,10 +77,15 @@ const App = () => {
 			let interval
 			if (isRunning) {
 				interval = setInterval(() => setChrono(prevChrono => prevChrono - 1), 1000)
-				if (chrono === 0) clearInterval(interval)
+				if (chrono === 0) {
+					setTimeIsComplete(true)
+					clearInterval(interval)
+				}
 			}
 			return () => clearInterval(interval)
 		}, [isRunning, chrono])
+
+	if (timeIsComplete) audio.play()
 
 	return <>
 		<AppBar position="fixed" style={styles.appBar}>
