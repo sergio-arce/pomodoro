@@ -1,15 +1,15 @@
 
 import React from 'react'
-import { Typography } from '@material-ui/core'
+import { Typography, withStyles } from '@material-ui/core'
 
-const styles = {
+const styles = (theme) => ({
     typography: {
         color: '#fff',
         fontSize: '6.25rem'
     }
-}
+})
 
-const Tempo = ({ chrono }) => {
+const Tempo = ({ classes, chrono }) => {
 
     const changeToString = (num) => {
 
@@ -23,11 +23,11 @@ const Tempo = ({ chrono }) => {
 
     return <>
         <Typography
-            style={styles.typography}
+            className={classes.typography}
             align='center'
         >
             {changeToString(chrono)}
         </Typography>
     </>
 }
-export default Tempo
+export default withStyles(styles)(Tempo)

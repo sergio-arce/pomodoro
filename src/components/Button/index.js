@@ -1,24 +1,24 @@
 
 import React from 'react'
-import { Button as ButtonUi } from '@material-ui/core'
+import { Button as ButtonUi, withStyles } from '@material-ui/core'
 
-const styles = {
+const styles = (theme) => ({
     button: {
         color: 'white',
-        width: '6.85rem',
-        margin: '20px 0',
+        margin: '0 2.5px',
+        width: '6.4rem',
+        border: '1px solid  rgba(255, 255, 255, 0.3)',
+        background: 'none rgba(255, 255, 255, 0.2)',
     }
-}
+})
 
-const Button = ({ label, name, onAction }) => {
-    return <>
-        <ButtonUi
-            style={styles.button}
-            name={name}
-            onClick={() => onAction(name)}
-        >
-            {label}
-        </ButtonUi>
-    </>
-}
-export default Button
+const Button = ({ classes, label, name, onAction }) => <>
+    <ButtonUi
+        className={classes.button}
+        name={name}
+        onClick={() => onAction(name)}
+    >
+        {label}
+    </ButtonUi>
+</>
+export default withStyles(styles)(Button)
