@@ -77,7 +77,7 @@ Want to contribute? Follow these recommendations.
 - Sergio Arce 
 - e-mail: sergio.arce.dev@gmail.com
 
-![github](https://github.com/sergi23)
+- ![github](https://github.com/sergi23)
 
 ---
 
