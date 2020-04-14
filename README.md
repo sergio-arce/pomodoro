@@ -2,7 +2,10 @@
 #   Pomodoro app
 ### Podoro technique description 
 
-    The Pomodoro Technique is a method to improve the administration of the time dedicated to an activity. It was developed by Francesco Cirillo in the late 1980. A timer is used to divide time into indivisible intervals, called pomodoros , of 25 minutes of activity, followed by 5 minutes of rest, with longer pauses every four pomodoros. 
+    The Pomodoro Technique is a method to improve the administration of the time dedicated to an activity. 
+    It was developed by Francesco Cirillo in the late 1980. A timer is used to divide time into indivisible 
+    intervals, called pomodoros , of 25 minutes of activity, followed by 5 minutes of rest, with longer 
+    pauses every four pomodoros. 
 
 
 <!-- ![](https://media.giphy.com/media/WQg1PGTQZMaEEHtALP/giphy.gif) -->
