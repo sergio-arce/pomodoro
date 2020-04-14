@@ -9,10 +9,10 @@
 
 
 <!-- ![](https://media.giphy.com/media/WQg1PGTQZMaEEHtALP/giphy.gif) -->
-<p align="center">
+<p align="left">
 <img  widht="200" height="200" src="./src/assets/image-pomodoro.jpg">
 </p>
-<p align="center">
+<p align="right">
 <img  widht="400" height="350" src='https://media.giphy.com/media/SUiwjvG8y0IJ25K4VO/giphy.gif'>
 </p>
 
