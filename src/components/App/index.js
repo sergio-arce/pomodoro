@@ -5,11 +5,8 @@ import MainControls from '../MainControls'
 import SecondaryControls from '../SecondaryControls'
 // material-ui
 import { withStyles, AppBar, Toolbar, IconButton, Card, Drawer, Divider, List, ListItem, ListItemIcon, ListItemText } from '@material-ui/core'
-// import MenuIcon from '@material-ui/icons/MenuIcon'
-import MenuSharpIcon from '@material-ui/icons/MenuSharp'
-import ChevronLeftSharpIcon from '@material-ui/icons/ChevronLeftSharp'
-import Brightness4Icon from '@material-ui/icons/Brightness4';
-import VolumeDownIcon from '@material-ui/icons/VolumeDown';
+import { Help, Brightness4, VolumeDown, ChevronLeft, MenuSharp, Info } from '@material-ui/icons';
+
 import soundfile from '../../assets/alarm.mp3'
 
 const styles = (theme) => ({
@@ -18,10 +15,10 @@ const styles = (theme) => ({
 		justifyContent: 'center',
 		alignItems: 'center',
 		minHeight: '100vh',
-		backgroundColor: 'grey',
+		backgroundColor: theme.palette.secondary.main,
 	},
 	appBar: {
-		backgroundColor: '#676972',
+		backgroundColor: theme.palette.secondary.main,
 	},
 	card: {
 		display: 'flex',
@@ -31,13 +28,16 @@ const styles = (theme) => ({
 		width: '330px',
 		height: '370px'
 	},
+	// chevronLeft: {
+	// 	color: 'black'
+	// },
 	pomodoro: {
 		backgroundColor: '#f05b56'
 	},
 	drawerHeader: {
 		display: 'flex',
 		alignItems: 'center',
-		width: '200px',
+		width: '250px',
 		padding: theme.spacing(0, 1),
 		// necessary for content to be below app bar
 		...theme.mixins.toolbar,
@@ -107,7 +107,7 @@ const App = ({ classes }) => {
 					color="inherit"
 					onClick={() => setOpen(!open)}
 				>
-					<MenuSharpIcon />
+					<MenuSharp />
 				</IconButton>
 				
 			</Toolbar>
@@ -119,18 +119,26 @@ const App = ({ classes }) => {
 		>
 			<div className={classes.drawerHeader}>
 				<IconButton onClick={() => setOpen(!open)}>
-					{open && <ChevronLeftSharpIcon style={{color: 'black'}}/> }
+					{open && <ChevronLeft fontSize='large' className={classes.chevronLeft}/> }
 				</IconButton>
 			</div>
-			<Divider />
+			<Divider light={true}/>
 			<List>
 				<ListItem button>
 					<ListItemText primary='Dark Mode'/>
-					<ListItemIcon><Brightness4Icon /></ListItemIcon>
+					<ListItemIcon><Brightness4 /></ListItemIcon>
 				</ListItem>
 				<ListItem button>
 					<ListItemText primary='Sound'/>
-					<ListItemIcon><VolumeDownIcon /></ListItemIcon>
+					<ListItemIcon><VolumeDown /></ListItemIcon>
+				</ListItem>
+				<ListItem button>
+					<ListItemText primary='What is pomodoro?'/>
+					<ListItemIcon><Help /></ListItemIcon>
+				</ListItem>
+				<ListItem button>
+					<ListItemText primary='About Me'/>
+					<ListItemIcon><Info /></ListItemIcon>
 				</ListItem>
 			</List>
 			<Divider variant='middle' light={true}/>

@@ -1,6 +1,6 @@
 
 import { convertToRGB } from './mixins'
-import { palette } from './colors'
+import { palette } from './palette'
 
 const overrides = {
 

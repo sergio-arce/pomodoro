@@ -1,11 +1,12 @@
 
 const palette = {
     primary: {
-        main: '#317d3b'
+        main: '#f05b56'
     },
     secondary: {
-        main: '#686D90'
-    }
+        main: '#424242'
+    },
+    type: 'dark'
 }
 
 export { palette }

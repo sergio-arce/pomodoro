@@ -1,19 +1,18 @@
 
 import { createMuiTheme } from '@material-ui/core/styles'
 
-import { palette } from './colors'
-import { typography } from './fonts'
-import { overrides } from './utils'
-import { flexy, gradient, convertToRGB } from './mixins'
+import { palette } from './palette'
+import { typography } from './typography'
+import { overrides } from './overrides'
+import { flexy, convertToRGB } from './mixins'
 
 const theme = createMuiTheme({
-    spacing: value => value * 2,
+    spacing: value => value ** 2,
     palette,
     overrides,
     typography,
     mixins: {
         flexy,
-        gradient,
         convertToRGB
     }
 })

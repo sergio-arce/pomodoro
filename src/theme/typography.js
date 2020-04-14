@@ -12,7 +12,4 @@ const typography = {
     },
 }
 
-export {
-    globalFontsRules,
-    typography
-}
+export { globalFontsRules, typography }
