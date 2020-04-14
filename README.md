@@ -7,8 +7,6 @@
     intervals, called pomodoros , of 25 minutes of activity, followed by 5 minutes of rest, with longer pauses 
     every four pomodoros. 
 
-
-<!-- ![](https://media.giphy.com/media/WQg1PGTQZMaEEHtALP/giphy.gif) -->
 <p align="center">
 <img  widht="200" height="200" src="./src/assets/image-pomodoro.jpg">
 </p>
@@ -16,12 +14,11 @@
 <img  widht="400" height="350" src='https://media.giphy.com/media/SUiwjvG8y0IJ25K4VO/giphy.gif'>
 </p>
 
-
 ---
 
 ### Demo live
 
-<!-- Click [here](https://sergi23-weather-app.netlify.com) -->
+Click [here](https://sergi23-pomodoro.netlify.com/)
 
 ---
 
@@ -68,7 +65,6 @@ Want to contribute? Follow these recommendations.
 
 
 [![build](https://img.shields.io/badge/build-material--ui-%230081cb)](https://material-ui.com/)
-
 
 ---
 
