@@ -77,7 +77,7 @@ Want to contribute? Follow these recommendations.
 - Sergio Arce 
 - e-mail: sergio.arce.dev@gmail.com
 
-    [![](https://img.shields.io/badge/github-sergi23-%2324292e)](https://github.com/sergi23)
+[![](https://img.shields.io/badge/github-sergi23-%2324292e)](https://github.com/sergi23)
 
 ---
 
