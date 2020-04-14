@@ -59,13 +59,13 @@ Want to contribute? Follow these recommendations.
 ### Built with
 
 
-[![](https://img.shields.io/badge/build-javascript-%23e9d44e)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![build](https://img.shields.io/badge/build-javascript-%23e9d44e)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
-[![](https://img.shields.io/badge/build-ES6-%23f4b701)](http://es6-features.org/#Constants)
+[![build](https://img.shields.io/badge/build-ES6-%23f4b701)](http://es6-features.org/#Constants)
 
-[![](https://img.shields.io/badge/build-react.js-%2361dafb)](https://reactjs.org/)
+[![build](https://img.shields.io/badge/build-react.js-%2361dafb)](https://reactjs.org/)
 
-[![](https://img.shields.io/badge/build-material--ui-%230081cb)](https://material-ui.com/)
+[![build](https://img.shields.io/badge/build-material--ui-%230081cb)](https://material-ui.com/)
 
 
 ---
