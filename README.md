@@ -2,24 +2,31 @@
 #   Pomodoro app
 ### Technique description 
 
-    The Pomodoro Technique is a method to improve the administration of the time dedicated to an activity. It was developed by Francesco Cirillo in the late 1980. A timer is used to divide time into indivisible intervals, called pomodoros , of 25 minutes of activity, followed by 5 minutes of rest, with longer pauses every four pomodoros. 
+    The Pomodoro Technique is a method to improve the administration of the time dedicated to an activity. 
+    It was developed by Francesco Cirillo in the late 1980. A timer is used to divide time into indivisible 
+    intervals, called pomodoros , of 25 minutes of activity, followed by 5 minutes of rest, with longer pauses 
+    every four pomodoros. 
 
 
 <!-- ![](https://media.giphy.com/media/WQg1PGTQZMaEEHtALP/giphy.gif) -->
 <p align="center">
 <img  widht="200" height="200" src="./src/assets/image-pomodoro.jpg">
 </p>
+<p align="center">
+<img  widht="400" height="350" src='https://media.giphy.com/media/SUiwjvG8y0IJ25K4VO/giphy.gif'>
+</p>
+
 
 ---
 
 ### Demo live
 
----
-
 <!-- Click [here](https://sergi23-weather-app.netlify.com) -->
 
-### Environment setup 
+---
 
+
+### Environment setup 
 
 
 1. Clone this project: `$ git clone https://github.com/sergi23/pomodoro`  
